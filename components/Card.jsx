@@ -1,9 +1,14 @@
 
 const Card = (props) => {
-  console.log(props.item.openSpots);
+  let badgeText
+    if (props.item.openSpots === 0) {
+        badgeText = "SOLD OUT"
+    } else if (props.item.location === "Online") {
+        badgeText = "ONLINE"
+    }
   return (
     <div className = "card">
-        {props.openSpots === 0 && <div className = "cardBadge">SOLD OUT</div>}
+        {badgeText && <div className = "cardBadge">{badgeText}</div>}
         <img src = {`./images/${props.item.coverImg}`} alt = "Main card image." className = "cardImage"></img>
         <div className = "rating"> 
           <img src = "./star.png" alt = "Star icon." className = "star"></img>
