@@ -24,7 +24,6 @@ section{
 .heroSection{
   display: flex;
   flex-direction: column;
-  margin-top: 25px;
 }
 
 .heroImage{
@@ -33,11 +32,76 @@ section{
 }
 
 .heroHeader{
-  margin-bottom: 0;
+  margin-bottom: 16px;
 }
 
 .heroDesc{
   margin-top: 0;
 }
+
+.cardsList {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow-x: auto;
+}
+
+.card{
+  position: relative;
+  font-size: .75rem;
+  width: 175px;
+  flex: 0 0 auto;         /* ADD */
+  display: flex;          /* ADD */
+  flex-direction: column; /* ADD */
+}
+
+.cardImage {
+  width: 100%;
+  border-radius: 9px;
+  margin-bottom: 9px;
+}
+
+/* ADD */
+.cardTitle {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rating{
+  display: flex;
+  align-items: center;
+}
+
+.star{
+  width: 14px;
+  height: 14px;
+  margin-right: 4px;
+}
+
+.cardTitle{
+  font-weight: normal;
+  font-size: 0.75rem;
+}
+
+/* ADD */
+.cardPrice {
+  margin-top: auto;
+}
+
+.cardBadge{
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  background-color: white;
+  padding: 5px 7px;
+  border-radius: 2px;
+  font-weight: bold;
+}
+
+.gray{
+  color: #918E9B;
+}
+
+
 
 
